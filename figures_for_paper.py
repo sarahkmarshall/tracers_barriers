@@ -159,10 +159,10 @@ for rechargeScenario in range(number_of_recharge_scenarios): # number_of_recharg
 
         modelname = modelName
         modelname_mt = modelName_mt
-        modelname = (str(modelname) + "_R" + str(rechargeScenario+1) 
-        + "_CS" + str(caseStudy+1))
-        modelname_mt = (modelname_mt + "_R" + str(rechargeScenario+1) 
-        + "_CS" + str(caseStudy+1))
+        modelname = (str(modelname) + "_R" + str(rechargeScenario) 
+        + "_CS" + str(caseStudy))
+        modelname_mt = (modelname_mt + "_R" + str(rechargeScenario) 
+        + "_CS" + str(caseStudy))
        
         # HEADFILES - FROM FLOW MODEL
         headobj = bf.HeadFile(modelname + '.hds')
@@ -298,7 +298,7 @@ for rechargeScenario in range(number_of_recharge_scenarios): # number_of_recharg
             len_barr = len_barr_fullypen
             x_sectn_area = xsectn_area_fp
     
-        print("Recharge: " + str(rechargeScenario+1) + ". CS: " + str(caseStudy+1))
+        print("Recharge: " + str(rechargeScenario) + ". CS: " + str(caseStudy))
 
         y = gammaAgeDict[rechargeScenarioNames[rechargeScenario]][caseStudyNames[caseStudy]]
         abs_y = np.absolute(gammaAgeDict[rechargeScenarioNames[rechargeScenario]][caseStudyNames[caseStudy]])
@@ -375,7 +375,7 @@ for rechargeScenario in range(number_of_recharge_scenarios): # number_of_recharg
             sa_barr = sa_barr_fullypen
             len_barr = len_barr_fullypen
             x_sectn_area = xsectn_area_fp
-        print("Recharge: " + str(rechargeScenario+1) + ". CS: " + str(caseStudy+1))
+        print("Recharge: " + str(rechargeScenario) + ". CS: " + str(caseStudy))
 
         y = diffHeadAbsDict[rechargeScenarioNames[rechargeScenario]][caseStudyNames[caseStudy]]
         abs_y = np.absolute(diffHeadAbsDict[rechargeScenarioNames[rechargeScenario]][caseStudyNames[caseStudy]])
